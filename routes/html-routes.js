@@ -4,14 +4,13 @@ const path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 const db = require("../models")
-const id = '';
+
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      id = req.user.id
-      res.redirect("/members/" + id);
+      res.redirect("/members/" + req.user.id);
     }
     res.render("signup");
   });
@@ -19,8 +18,7 @@ module.exports = function(app) {
   app.get("/login", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      id = req.user.id
-      res.redirect("/members/" + id);
+      res.redirect("/members/" + req.user.id);
     }
     res.render("login")
   });
