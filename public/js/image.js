@@ -39,16 +39,17 @@ $(document).ready(() => {
             const minutes = Math.floor(seconds / 60)
             const hours = Math.floor(minutes / 60)
             const days = Math.floor(hours / 24)
-
+            console.log(currentTime)
             if(days < 1 && hours < 1 && minutes < 1){
                 $(timeStamp[i]).text(`${seconds} seconds ago`)
             } else if (days < 1 && hours < 1){
                 $(timeStamp[i]).text(`${minutes} minutes ago`)
             } else if (days < 1){
-                $(timeStamp[i]).text(`${minutes} hours ago`)
+                $(timeStamp[i]).text(`${hours} hours ago`)
             } else if (days >= 1) {
                 $(timeStamp[i]).text(`${days} days ago`)
             }
+            
         }
     })
 });
