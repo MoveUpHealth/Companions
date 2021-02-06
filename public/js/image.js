@@ -46,7 +46,7 @@ $(document).ready(() => {
                 $(timeStamp[i]).text(`${minutes} minutes ago`)
             } else if (days < 1){
                 $(timeStamp[i]).text(`${minutes} hours ago`)
-            } else {
+            } else if (days >= 1) {
                 $(timeStamp[i]).text(`${days} days ago`)
             }
         }
