@@ -120,8 +120,8 @@ module.exports = function (app) {
           id: req.user.id
         }
     
-      }).then(() => {
-        res.redirect("/members/" + idUser);
+      }).then((data) => {
+        res.json(data)
       });
   })
 };
