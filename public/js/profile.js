@@ -30,7 +30,6 @@ $(function(){
             location: profileLoc.val().trim(),
             birthday: profileBir.val()
         }
-        console.log(profileObj)
         $.ajax({
             method: "PUT",
             url: "/uploadProfile",
