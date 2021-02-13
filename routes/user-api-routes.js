@@ -107,7 +107,7 @@ module.exports = function (app) {
   })
 
   app.put('/uploadProfile', (req,res) => {
-    const idUser = req.user.id
+    
     db.User.update(
       {
           displayName: req.body.displayName,

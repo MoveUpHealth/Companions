@@ -23,12 +23,13 @@ $(document).ready(() => {
         myPage.attr("href", `/members/${data.id}`)
         if (data.profileImage !== null){
             $('#mini-profile').attr("src", `..${data.profileImage}`)
+            console.log(data.profileImage)
         }
       });
   });
 
 $(function(){
-
+    //opens the comment box
     commentBtn.on('click', function(event){
         event.preventDefault();
         const openId = $(this).attr('data-id')
@@ -49,7 +50,7 @@ $(function(){
             }
         }
     })
-
+    //posts the comment
     addComment.on('click', function(event){
         event.preventDefault();
 

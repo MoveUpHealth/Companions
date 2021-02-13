@@ -9,17 +9,17 @@ const profileLoc = $('#location')
 const profileBir = $('#birthday')
 
 $(function(){
-
+    //edit button for profile image
     imageBtn.on('click', function(event){
         event.preventDefault()
         window.location.href = "/profileimage"
     })
-
+    //edit button for profile details
     detailsBtn.on('click', function(event){
         event.preventDefault()
         window.location.href = "/aboutme"
     })
-
+    //updates profile details
     profileBtn.on('click', function(event){
         event.preventDefault()
 
@@ -62,7 +62,6 @@ $(document).ready(() => {
         
         if(!null){
         profileUser.val(profileName)
-        profileImg.val(profileImage)
         profileFav.val(myFavorites)
         profileLoc.val(myLocation)
         profileBir.val(myBirthday)
